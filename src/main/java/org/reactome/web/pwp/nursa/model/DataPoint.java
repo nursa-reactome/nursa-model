@@ -1,7 +1,5 @@
 package org.reactome.web.pwp.nursa.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class DataPoint {
     private String symbol;
     private double pvalue;
