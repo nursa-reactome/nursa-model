@@ -1,47 +1,51 @@
 package org.reactome.web.pwp.nursa.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class DataSetPathway {
     public enum RegulationType {
-        UP,
-        DOWN
+        UP("Up"),
+        DOWN("Down");
+        
+        private final String repr;
+        
+        private RegulationType(final String repr) {
+            this.repr = repr;
+        }
+        
+        @Override
+        public String toString() {
+            return this.repr;
+        }
     };
 
-    private String description;
-    private double pValue;
+    private String name;
+    private double pvalue;
     private double fdr;
     private RegulationType regulationType;
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String name) {
+        this.name = name;
     }
     
-    public double getPValue() {
-        return pValue;
+    public double getPvalue() {
+        return pvalue;
     }
     
-    public void setPValue(double pValue) {
-        this.pValue = pValue;
+    @JsonProperty("pvalue")
+    public void setPvalue(double pvalue) {
+        this.pvalue = pvalue;
     }
     
-    // Resty JSON decoder insists on getfDR()/setfDR() as the
-    // getter/setter for the fdr field.
-    public double getfDR() {
+    public double getFdr() {
         return fdr;
     }
     
-    public void setfDR(double fdr) {
-        this.fdr = fdr;
-    }
-    
-    public double getFDR() {
-        return fdr;
-    }
-    
-    public void setFDR(double fdr) {
+    public void setFdr(double fdr) {
         this.fdr = fdr;
     }
     
