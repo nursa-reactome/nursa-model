@@ -1,6 +1,5 @@
 package org.reactome.web.pwp.nursa.model;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * @author Fred Loney <loneyf@ohsu.edu>
  */
-@SuppressWarnings("unused")
 public class DataSet {
 
     private String doi;
@@ -21,25 +19,11 @@ public class DataSet {
 
     private List<DataSetPathway> pathways;
 
-    @JsonProperty("doi")
-    public String getDOI() {
+    public String getDoi() {
         return doi;
     }
 
-    @JsonProperty("doi")
-    public void setDOI(String doi) {
-        this.doi = doi;
-    }
-
-    // Resty uses the default Jackson data binding field
-    // name conversion convention, but ignores the Jackson
-    // property annotation. Thus, Resty insists on
-    // getdOI/setdOI rather than getDOI/setDOI.
-    public String getdOI() {
-        return doi;
-    }
-
-    public void setdOI(String doi) {
+    public void setDoi(String doi) {
         this.doi = doi;
     }
 
