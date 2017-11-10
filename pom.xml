@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.reactome.web.pwp</groupId>
+	<groupId>org.reactome.nursa</groupId>
 	<artifactId>nursa-model</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>Reactome Nursa Data Model</name>
 
 	<description>
@@ -41,7 +41,7 @@
 		<reactome.web.model>2.0.0</reactome.web.model>
 		<jackson.version>2.9.0</jackson.version>
 
-		<appModule>org.reactome.web.pwp.nursa.NursaModel</appModule>
+		<appModule>org.reactome.nursa.NursaModel</appModule>
 		<appName>${appModule}</appName>
 	</properties>
 
@@ -195,15 +195,15 @@
 							<goal>install-file</goal>
 						</goals>
 						<configuration>
-							<groupId>org.reactome.web.pwp</groupId>
+							<groupId>org.reactome.nursa</groupId>
 							<artifactId>nursa-model</artifactId>
-							<version>${project.version}</version>
+							<version>${project.version}-SNAPSHOT</version>
 							<packaging>jar</packaging>
 							<file>
-								target/nursa-model-1.0.0-SNAPSHOT.jar
+								target/nursa-model-${project.version}.jar
 							</file>
 							<source>
-								target/nursa-model-1.0.0-SNAPSHOT-sources.jar
+								target/nursa-model-${project.version}-sources.jar
 							</source>
 						</configuration>
 					</execution>
