@@ -1,4 +1,4 @@
-package org.reactome.web.pwp.nursa.model;
+package org.reactome.nursa.model;
 
 public class DataPoint {
     private String symbol;

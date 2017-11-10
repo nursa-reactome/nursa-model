@@ -1,8 +1,6 @@
-package org.reactome.web.pwp.nursa.model;
+package org.reactome.nursa.model;
 
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Fred Loney <loneyf@ohsu.edu>
@@ -16,8 +14,6 @@ public class DataSet {
     private String description;
 
     private List<DataPoint> dataPoints;
-
-    private List<DataSetPathway> pathways;
 
     public String getDoi() {
         return doi;
@@ -49,13 +45,5 @@ public class DataSet {
 
     public void setDataPoints(List<DataPoint> dataPoints) {
         this.dataPoints = dataPoints;
-    }
-
-    public List<DataSetPathway> getPathways() {
-        return pathways;
-    }
-
-    public void setPathways(List<DataSetPathway> pathways) {
-        this.pathways = pathways;
     }
 }
