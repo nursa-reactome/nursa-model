@@ -13,7 +13,7 @@ public class DataSet {
     
     private String description;
 
-    private List<DataPoint> dataPoints;
+    private List<Experiment> experiments;
 
     public String getDoi() {
         return doi;
@@ -39,11 +39,11 @@ public class DataSet {
         this.description = description;
     }
 
-    public List<DataPoint> getDataPoints() {
-        return dataPoints;
+    public List<Experiment> getExperiments() {
+        return experiments;
     }
 
-    public void setDataPoints(List<DataPoint> dataPoints) {
-        this.dataPoints = dataPoints;
+    public void setExperiments(List<Experiment> experiments) {
+        this.experiments = experiments;
     }
 }
