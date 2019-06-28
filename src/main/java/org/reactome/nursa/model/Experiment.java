@@ -1,26 +1,45 @@
 package org.reactome.nursa.model;
 
-import java.util.List;
-
 public class Experiment {
+
+    private int id;
+
+    private String name;
     
-   private String name;
-   
-   private List<DataPoint> dataPoints;
+    private String description;
 
-   public String getName() {
-       return name;
-   }
+    private String species;
 
-   public void setName(String name) {
-       this.name = name;
-   }
+    public int getId() {
+        return id;
+    }
 
-   public List<DataPoint> getDataPoints() {
-       return dataPoints;
-   }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-   public void setDataPoints(List<DataPoint> dataPoints) {
-       this.dataPoints = dataPoints;
-   }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
